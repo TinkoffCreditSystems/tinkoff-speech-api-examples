@@ -48,6 +48,12 @@ To disable profanity filter:
 $ ./recognize -e MPEG_AUDIO -r 16000 -c 1 --disable-profanity-filter -i ../audio/sample_5.mp3
 ```
 
+To enable conversion numerals from text to numeric form:
+
+```
+$ ./recognize -e MPEG_AUDIO -r 16000 -c 1 --enable-denormalization -i ../audio/sample_6.mp3
+```
+
 Run streaming speech recognition with interim results:
 
 ```

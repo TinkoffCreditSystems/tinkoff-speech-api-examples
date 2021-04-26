@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package tinkoff.cloud.longrunning.v1;
-option go_package = "stash.tcsbank.ru/stt/tinkoff_cloud_apis/pkg/tinkoff/cloud/longrunning/v1";
+option go_package = "github.com/TinkoffCreditSystems/voicekit-examples/golang/pkg/tinkoff/cloud/longrunning/v1";
 
 import "google/api/annotations.proto";
 import "google/protobuf/any.proto";

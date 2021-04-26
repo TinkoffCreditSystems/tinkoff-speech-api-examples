@@ -18,6 +18,7 @@ type RecognizeOptions struct {
 	LanguageCode                *string
 	DisableAutomaticPunctuation *bool
 	DisableProfanityFilter      *bool
+	EnableDenormalization       *bool
 }
 
 type StreamingRecognizeOptions struct {
@@ -91,6 +92,11 @@ func addRecognizeOptions(parser *argparse.Parser) *RecognizeOptions {
 		Default: false,
 	})
 
+	enableDenormalization := parser.Flag("", "enable-denormalization", &argparse.Options{
+		Help:    "Enables automatic conversion of numerals from text to numeric form",
+		Default: false,
+	})
+
 	return &RecognizeOptions{
 		InputFile:                   inputFile,
 		Encoding:                    encoding,
@@ -102,6 +108,7 @@ func addRecognizeOptions(parser *argparse.Parser) *RecognizeOptions {
 		LanguageCode:                languageCode,
 		DisableAutomaticPunctuation: disableAutomaticPunctuation,
 		DisableProfanityFilter:      disableProfanityFilter,
+		EnableDenormalization:       enableDenormalization,
 	}
 }
 

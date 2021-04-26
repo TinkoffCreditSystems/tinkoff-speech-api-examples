@@ -50,6 +50,7 @@ func main() {
 			ProfanityFilter:            !(*opts.DisableProfanityFilter),
 			EnableAutomaticPunctuation: !(*opts.DisableAutomaticPunctuation),
 			NumChannels:                uint32(*opts.NumChannels),
+			EnableDenormalization:      *opts.EnableDenormalization,
 		},
 		Audio: &sttPb.RecognitionAudio{
 			AudioSource: &sttPb.RecognitionAudio_Content{Content: contents},

@@ -19,6 +19,8 @@ mkdir -p temp/
 
 protoc $PROTOC_OPTS ../apis/tinkoff/cloud/stt/v1/*.proto
 protoc $PROTOC_OPTS ../apis/tinkoff/cloud/tts/v1/*.proto
+protoc $PROTOC_OPTS ../apis/tinkoff/cloud/longrunning/v1/*.proto
+
 
 rm -rf pkg/tinkoff
 
